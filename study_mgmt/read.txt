@@ -1,0 +1,46 @@
+# 👇️ create virtual environment
+python -m venv venv
+
+
+# 👇️ activate on Windows (cmd.exe)
+venv\Scripts\activate.bat
+
+
+# 👇️ activate on Unix or MacOS
+source venv/bin/activate
+
+
+# 👇️ install django in the virtual environment
+pip install django
+
+# 👇️ start your django project
+django-admin startproject mysite
+
+
+# 👇️ to exit environment
+deactivate
+#####################################################################################################################
+
+
+# 👇️ to check the django project running
+python .\manage.py runserver
+
+
+project -> collection of apps
+
+#  👇️ to create django app
+django-admin startapp <app-name>     #(with django environment)
+
+Then add std in study_management -> settings -> Under INSTALLED_APPS put 'std'
+
+
+# If adding templetes
+Create a 'templates' on root directory.
+And In study_management -> settings -> Under TEMPLATES -> dir :[provide path of templates directory]
+
+
+#  👇️ to create table in sqlite for respective models
+python .\manage.py makemigrations
+python .\manage.py migrate
+
+Use online sqlite3 viewer to check
